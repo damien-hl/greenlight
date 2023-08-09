@@ -9,7 +9,11 @@ import (
 )
 
 func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Request) {
+<<<<<<< HEAD
 	fmt.Fprintln(w, "create a new movie")
+=======
+	fmt.Fprintf(w, "create a new movie")
+>>>>>>> e379ed7b8197e6a601634dc440d8d7e1dfae5220
 }
 
 func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request) {
@@ -21,5 +25,9 @@ func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
+<<<<<<< HEAD
 	fmt.Fprintf(w, "show the details of movie %d\n", id)
+=======
+	fmt.Fprintf(w, "show the details of movie %d", id)
+>>>>>>> e379ed7b8197e6a601634dc440d8d7e1dfae5220
 }
