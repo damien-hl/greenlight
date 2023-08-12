@@ -15,3 +15,13 @@ docker run -d --name greenlight-postgres -e POSTGRES_PASSWORD=password -p 5432:5
 ```bash
 docker exec -it greenlight-postgres psql -U postgres
 ```
+
+### 3. Create a migration using golang-migrate
+```bash
+migrate create -seq -ext=.sql -dir=./migrations name_of_the_migration_here
+```
+
+### 4. Execute the migration
+```bash
+migrate -path=./migrations -database="postgres://greenlight:&P455word\$@localhost/greenlight?sslmode=disable" up
+```
