@@ -9,7 +9,7 @@ confirm:
 
 .PHONY: run/api
 run/api:
-	go run ./cmd/api
+	go run ./cmd/api -db-dsn=${GREENLIGHT_DB_DSN}
 
 .PHONY: db/psql
 db/psql:
